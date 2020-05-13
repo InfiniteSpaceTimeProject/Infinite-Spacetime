@@ -1,0 +1,46 @@
+using System;
+
+public class Player 
+{
+    public int health;
+    public float[] position;
+    public string name;
+
+    Random rnd = new Random();
+    //Cloud
+    public int UUID;
+
+    public int[] ownedSpaceships;
+
+    public Player(float[] position, string name)
+    {
+        health = 100;
+        this.position = position;
+        this.name = name;
+        //Cloud Verknüpfung für das Herausfinden der UUID
+        UUID = rnd.Next(9999999);
+        ownedSpaceships = new int[99];
+    }
+
+
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
+
+    public int getHealth()
+    {
+        return health;
+    }
+
+    public int getUUID()
+    {
+        return UUID;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+}
